@@ -13,6 +13,28 @@
         android:theme="@style/Theme.BurgosKingApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.auth.AccountSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.orders.OrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.confirmOrder.confirmOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.myOrder.MyOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.BurgosKingApp" />
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_register"
+            android:theme="@style/Theme.BurgosKingApp" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
