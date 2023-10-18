@@ -1,20 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.BurgosKingApp" parent="Theme.MaterialComponents.DayNight">
+    <style name="Base.Theme.BurgosKingApp" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-
+        <item name="colorPrimary">#FF5733</item>
+        <item name="colorAccent">#EEA734</item>
+        <item name="android:windowBackground">@color/white</item>
 
     </style>
 
-    <style name="Theme.BurgosKingApp" parent="Base.Theme.BurgosKingApp" />
-
-    <style name="Theme.BurgosKingApp.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="Theme.BurgosKingApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.BurgosKingApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

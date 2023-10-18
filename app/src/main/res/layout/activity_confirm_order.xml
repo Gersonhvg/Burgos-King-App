@@ -1,55 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".ui.confirmOrder.confirmOrderActivity">
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp">
 
-    <!-- Título de la página -->
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mi Pedido"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:background="#F8EAD0"
+        android:padding="16dp">
 
-    <!-- Mensaje de éxito -->
-    <TextView
-        android:id="@+id/tv_success_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Has realizado el pedido con éxito"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"/>
+        <ImageView
+            android:id="@+id/returnHome"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
 
-    <!-- Mensaje de felicitación -->
-    <TextView
-        android:id="@+id/tv_congratulation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¡Felicidades!"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        <ImageView
+            android:id="@+id/checkImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            android:background="#B0FC66"
+            app:srcCompat="@drawable/done_40px" />
 
-    <!-- Número de pedido -->
-    <TextView
-        android:id="@+id/tv_order_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Número de Pedido: #1234556"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/textOrderSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkImage"
+            android:layout_centerHorizontal="true"
+            android:text="You Place the Order Successfully"
+            android:textColor="#000"
+            android:textStyle="bold" />
 
-    <!-- Mensaje de preparación -->
-    <TextView
-        android:id="@+id/tv_preparation_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Estamos trabajando para preparar tu pedido"
-        android:textSize="16sp" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/textCongratulation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textOrderSuccess"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Congratulation"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/textOrderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textCongratulation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Order Number #123"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/textPrepareOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textOrderNumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="We are working to prepare your order"
+            android:textColor="#000" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

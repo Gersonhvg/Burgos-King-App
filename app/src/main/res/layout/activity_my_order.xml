@@ -8,7 +8,14 @@
     android:padding="16dp"
     tools:context=".ui.myOrder.MyOrderActivity">
 
-    <!-- Título de la página -->
+    <ImageView
+        android:id="@+id/returnHomeView"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:backgroundTint="#F8F8F8"
+        android:scaleType="fitStart"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
     <TextView
         android:id="@+id/my_order_title"
         android:layout_width="wrap_content"
@@ -17,20 +24,18 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <!-- Lista de productos -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/my_order_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:scrollbars="vertical" />
 
-    <!-- Subtotal -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end">
+        android:gravity="end"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,37 +47,42 @@
             android:id="@+id/tv_subtotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:text="$76"
-            android:textSize="18sp"
-            android:layout_marginStart="8dp"/>
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total a pagar"
-            android:textSize="18sp" />
+            android:layout_weight="0.2"
+            android:text="Total a pagar  >  "
+            android:textAllCaps="true"
+            android:textColor="#232222"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/tv_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="$76"
+            android:textAlignment="viewEnd"
+            android:textColor="#D7972F"
             android:textSize="18sp"
-            android:layout_marginStart="8dp" />
+            android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Método de pago y tiempo de espera -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:marginVertical="8dp">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_payment_method"
@@ -90,12 +100,16 @@
     </LinearLayout>
 
 
-    <!-- Botón para realizar el pedido -->
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btn_make_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HACER UN PEDIDO"
-        android:layout_marginTop="16dp"
-        app:cornerRadius="8dp" />
+        android:layout_marginTop="12dp"
+        android:background="@color/orange"
+        android:outlineProvider="none"
+        android:text="REALIZAR PEDIDO"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 </LinearLayout>

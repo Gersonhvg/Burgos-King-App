@@ -11,15 +11,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear Cuenta"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:background="@android:color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Crear cuenta"
-        android:textSize="24sp"
-        android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingrese sus datos para registrarse correctamente."
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
 
-    <EditText
+            <TextView
+                android:id="@+id/tv_link_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Ya tienes cuenta?"
+                android:textSize="18sp"
+                android:textColor="@color/orange" />
+        </LinearLayout>
+
+        <EditText
         android:id="@+id/firstNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,15 +103,28 @@
         android:inputType="phone"
         android:layout_marginTop="8dp"/>
 
-    <EditText
+    <TextView
         android:id="@+id/birthEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
         android:minWidth="48dp"
+        android:textSize="18dp"
         android:hint="FECHA DE NACIMIENTO"
         android:layout_marginTop="8dp"
         android:inputType="date"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_marginEnd="10dp"
+            android:minWidth="48dp"
+            android:minHeight="40dp"
+            android:scaleType="fitEnd"
+            android:text="GENERO"
+            android:layout_gravity="bottom"
+            android:textSize="20sp" />
 
     <Spinner
         android:id="@+id/genderSpinner"
@@ -92,16 +132,21 @@
         android:layout_height="wrap_content"
         android:minHeight="48dp"
         android:minWidth="48dp"
-        android:layout_marginTop="8dp"
         android:entries="@array/gender_array"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:minWidth="48dp"
-        android:text="REGISTRARSE"
-        android:layout_marginTop="16dp"/>
+        <Button
+            android:id="@+id/btn_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@color/orange"
+            android:outlineProvider="none"
+            android:text="REGISTRARSE"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_forgot_password" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -111,18 +156,5 @@
         android:layout_marginTop="16dp"
         android:layout_gravity="center_horizontal"/>
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/textfield_label">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
     </LinearLayout>
-
-
 </ScrollView>

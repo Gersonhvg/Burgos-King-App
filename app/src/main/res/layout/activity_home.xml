@@ -7,7 +7,6 @@
     android:padding="16dp"
     tools:context=".ui.home.HomeActivity">
 
-    <!-- Icono del carrito en la esquina superior derecha -->
     <ImageView
         android:id="@+id/cartIcon"
         android:layout_width="30dp"
@@ -16,34 +15,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Lista de productos -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/productsList"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="60dp"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cartIcon"
-        app:layout_constraintBottom_toTopOf="@+id/navigationBar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Barra de navegación en la parte inferior -->
     <LinearLayout
         android:id="@+id/navigationBar"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
         android:orientation="horizontal"
+        android:background="#FFFFFF"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-    <!-- Icono y texto de Home -->
         <LinearLayout
+            android:id="@+id/navigationHome"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_weight="1"
+            android:background="#9FF8C572"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="8dp">
@@ -62,8 +62,8 @@
 
         </LinearLayout>
 
-    <!-- Icono y texto de Ordenes -->
     <LinearLayout
+        android:id="@+id/navigationOrders"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_weight="1"
@@ -85,8 +85,8 @@
 
     </LinearLayout>
 
-    <!-- Icono y texto de Perfil -->
         <LinearLayout
+            android:id="@+id/navigationPerfil"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_weight="1"
@@ -110,5 +110,16 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/titleHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INICIO"
+        android:textAlignment="center"
+        android:textColor="#020202"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

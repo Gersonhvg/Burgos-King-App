@@ -10,20 +10,24 @@
 
     <!-- Header: Orders -->
     <TextView
+        android:id="@+id/my_order_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Orders"
+        android:layout_marginBottom="12dp"
+        android:text="ORDENES DEL DIA"
+        android:textColor="#383838"
         android:textSize="24sp"
-        android:layout_marginBottom="8dp"/>
+        android:textStyle="bold" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/no_orders_text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Today"
-        android:textSize="24sp"
-        android:layout_marginBottom="16dp"/>
+        android:text="Ninguno"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
-    <!-- Order List (using RecyclerView for historical orders) -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/orders_recyclerview"
         android:layout_width="match_parent"
@@ -31,15 +35,13 @@
         android:layout_weight="1"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Navigation Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!-- Icono y texto de Home -->
-        <!-- Icono y texto de Home -->
         <LinearLayout
+            android:id="@+id/navigationHome"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_weight="1"
@@ -61,9 +63,10 @@
 
         </LinearLayout>
 
-        <!-- Icono y texto de Ordenes -->
         <LinearLayout
+            android:id="@+id/navigationOrders"
             android:layout_width="0dp"
+            android:background="#9FF8C572"
             android:layout_height="56dp"
             android:layout_weight="1"
             android:gravity="center"
@@ -84,8 +87,8 @@
 
         </LinearLayout>
 
-        <!-- Icono y texto de Perfil -->
         <LinearLayout
+            android:id="@+id/navigationPerfil"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_weight="1"
@@ -106,6 +109,5 @@
                 android:textSize="12sp" />
 
         </LinearLayout>
-
     </LinearLayout>
-    </LinearLayout>
+</LinearLayout>
