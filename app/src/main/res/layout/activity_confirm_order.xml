@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/checkImage"
             android:layout_centerHorizontal="true"
-            android:text="You Place the Order Successfully"
+            android:text="Realizaste el pedido con exito"
             android:textColor="#000"
             android:textStyle="bold" />
 
@@ -48,7 +48,7 @@
             android:layout_below="@id/textOrderSuccess"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
-            android:text="Congratulation"
+            android:text="Felicitaciones"
             android:textColor="#000" />
 
         <TextView
@@ -68,7 +68,7 @@
             android:layout_below="@id/textOrderNumber"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
-            android:text="We are working to prepare your order"
+            android:text="Estamos trabajando para preparar tu pedido"
             android:textColor="#000" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

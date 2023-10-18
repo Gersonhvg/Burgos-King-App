@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.burgosking.order.R
+import com.burgosking.order.data.db.database
 import com.burgosking.order.databinding.ActivityConfirmOrderBinding
 import com.burgosking.order.databinding.ActivityHomeBinding
 import com.burgosking.order.ui.home.HomeActivity
@@ -20,6 +21,13 @@ class confirmOrderActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
                 finish()
+        }
+
+        val lastOrder = database.orderList.lastOrNull()
+        if (lastOrder != null) {
+            binding.textOrderNumber.text = "Order Number #${lastOrder.id}"
+        } else {
+            binding.textOrderNumber.text = "Order Number #0000"
         }
     }
 }

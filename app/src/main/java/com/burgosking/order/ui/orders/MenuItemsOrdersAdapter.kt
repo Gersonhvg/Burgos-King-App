@@ -24,7 +24,7 @@ class MenuItemsOrdersAdapter: RecyclerView.Adapter<MenuItemsOrdersAdapter.MenuIt
     inner class MenuItemViewHolder(private val binding: OrdersItemMenuBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(menuItem: MenuData) {
             binding.itemDescription.text = menuItem.description
-            binding.itemPrice.text = "$${menuItem.price}"
+            binding.itemPrice.text = "S/. ${menuItem.price}"
         }
     }
 }
