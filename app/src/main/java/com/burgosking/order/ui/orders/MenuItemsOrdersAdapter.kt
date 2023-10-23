@@ -3,12 +3,12 @@ package com.burgosking.order.ui.orders
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.burgosking.order.data.models.MenuData
+import com.burgosking.order.data.models.Menu
 import com.burgosking.order.databinding.OrdersItemMenuBinding
 
 class MenuItemsOrdersAdapter: RecyclerView.Adapter<MenuItemsOrdersAdapter.MenuItemViewHolder>() {
-    private var menuItems: List<MenuData> = listOf()
-    fun submitList(menuItems: List<MenuData>) {
+    private var menuItems: List<Menu> = listOf()
+    fun submitList(menuItems: List<Menu>) {
         this.menuItems = menuItems
         notifyDataSetChanged()
     }
@@ -22,7 +22,7 @@ class MenuItemsOrdersAdapter: RecyclerView.Adapter<MenuItemsOrdersAdapter.MenuIt
     }
     override fun getItemCount(): Int = menuItems.size
     inner class MenuItemViewHolder(private val binding: OrdersItemMenuBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(menuItem: MenuData) {
+        fun bind(menuItem: Menu) {
             binding.itemDescription.text = menuItem.description
             binding.itemPrice.text = "S/. ${menuItem.price}"
         }

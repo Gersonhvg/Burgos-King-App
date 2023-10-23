@@ -1,6 +1,6 @@
 package com.burgosking.order.data.models
 
-data class UserData(
+data class User(
     var dni: String,
     var firstname: String,
     var lastname: String,

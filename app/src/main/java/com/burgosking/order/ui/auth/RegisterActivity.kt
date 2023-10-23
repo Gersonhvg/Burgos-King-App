@@ -6,9 +6,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.burgosking.order.data.db.database
-import com.burgosking.order.data.models.UserData
+import com.burgosking.order.data.models.User
 import com.burgosking.order.databinding.ActivityRegisterBinding
-import com.burgosking.order.ui.home.HomeActivity
 import java.util.Calendar
 
 class RegisterActivity : AppCompatActivity() {
@@ -56,7 +55,7 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val newUser = UserData(dni, firstName, lastName, phone, birthDate, gender, email, password)
+            val newUser = User(dni, firstName, lastName, phone, birthDate, gender, email, password)
             database.userList.add(newUser)
             Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
 

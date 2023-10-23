@@ -9,11 +9,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.burgosking.order.R
-import com.burgosking.order.data.models.MenuData
+import com.burgosking.order.data.models.Menu
 import com.burgosking.order.data.db.database
 import com.squareup.picasso.Picasso
 
-class MenuAdapter(private val menuList: List<MenuData>) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
+class MenuAdapter(private val menuList: List<Menu>) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
     inner class MenuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.menuImageView)
         val nameTextView: TextView = itemView.findViewById(R.id.menuNameTextView)

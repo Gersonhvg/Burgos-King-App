@@ -1,6 +1,6 @@
 package com.burgosking.order.data.models
 
-data class MenuData(
+data class Menu(
     val id: Int,
     val description: String,
     val photo: String,

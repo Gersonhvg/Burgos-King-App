@@ -6,10 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.burgosking.order.R
-import com.burgosking.order.data.models.MenuData
-import com.burgosking.order.data.models.OrderData
+import com.burgosking.order.data.models.Menu
 
-class MyOrderAdapter(public val orderList: List<MenuData>, private val activity: MyOrderActivity): RecyclerView.Adapter<MyOrderAdapter.OrderViewHolder>() {
+class MyOrderAdapter(public val orderList: List<Menu>, private val activity: MyOrderActivity): RecyclerView.Adapter<MyOrderAdapter.OrderViewHolder>() {
     inner class OrderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.orderNameTextView)
         val totalTextView: TextView = itemView.findViewById(R.id.orderTotalTextView)
